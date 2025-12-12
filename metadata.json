@@ -1,0 +1,5 @@
+{
+  "name": "Campaign Manager",
+  "description": "An RPG-themed productivity dashboard combining a task manager, habit tracker, and journal, styled like a D&D 5e character sheet.",
+  "requestFramePermissions": []
+}
