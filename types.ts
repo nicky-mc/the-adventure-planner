@@ -1,10 +1,10 @@
 export enum AttributeType {
-  STR = 'STR', 
-  DEX = 'DEX', 
-  CON = 'CON', 
-  INT = 'INT', 
-  WIS = 'WIS', 
-  CHA = 'CHA', 
+  STR = "STR",
+  DEX = "DEX",
+  CON = "CON",
+  INT = "INT",
+  WIS = "WIS",
+  CHA = "CHA",
 }
 
 export interface Quest {
@@ -19,7 +19,7 @@ export interface Quest {
 export interface JournalEntry {
   id?: number;
   content: string;
-  image?: string; 
+  image?: string;
   createdAt: number;
 }
 
@@ -27,7 +27,7 @@ export interface Feat {
   id?: number;
   title: string;
   description: string;
-  type: 'FEAT' | 'CLASS_FEATURE';
+  type: "FEAT" | "CLASS_FEATURE";
   createdAt: number;
 }
 
@@ -49,12 +49,12 @@ export interface Spell {
 }
 
 export interface CharacterStats {
-  id?: number; 
+  id?: number;
   name: string;
   classType: string; // e.g., "Wizard 3 / Fighter 1"
   level: number;
   xp: number;
-  
+
   // Attributes (Base Scores)
   str: number;
   dex: number;
@@ -92,43 +92,43 @@ export interface CharacterStats {
 
 export const getXpForNextLevel = (level: number) => {
   // PF1e Fast XP Track approximation or custom linear
-  return level * 1000; 
+  return level * 1000;
 };
 
 export const PF1_SKILLS_LIST = [
-  { name: 'Acrobatics', attr: AttributeType.DEX },
-  { name: 'Appraise', attr: AttributeType.INT },
-  { name: 'Bluff', attr: AttributeType.CHA },
-  { name: 'Climb', attr: AttributeType.STR },
-  { name: 'Craft', attr: AttributeType.INT },
-  { name: 'Diplomacy', attr: AttributeType.CHA },
-  { name: 'Disable Device', attr: AttributeType.DEX },
-  { name: 'Disguise', attr: AttributeType.CHA },
-  { name: 'Escape Artist', attr: AttributeType.DEX },
-  { name: 'Fly', attr: AttributeType.DEX },
-  { name: 'Handle Animal', attr: AttributeType.CHA },
-  { name: 'Heal', attr: AttributeType.WIS },
-  { name: 'Intimidate', attr: AttributeType.CHA },
-  { name: 'Knowledge (Arcana)', attr: AttributeType.INT },
-  { name: 'Knowledge (Dungeoneering)', attr: AttributeType.INT },
-  { name: 'Knowledge (Engineering)', attr: AttributeType.INT },
-  { name: 'Knowledge (Geography)', attr: AttributeType.INT },
-  { name: 'Knowledge (History)', attr: AttributeType.INT },
-  { name: 'Knowledge (Local)', attr: AttributeType.INT },
-  { name: 'Knowledge (Nature)', attr: AttributeType.INT },
-  { name: 'Knowledge (Nobility)', attr: AttributeType.INT },
-  { name: 'Knowledge (Planes)', attr: AttributeType.INT },
-  { name: 'Knowledge (Religion)', attr: AttributeType.INT },
-  { name: 'Linguistics', attr: AttributeType.INT },
-  { name: 'Perception', attr: AttributeType.WIS },
-  { name: 'Perform', attr: AttributeType.CHA },
-  { name: 'Profession', attr: AttributeType.WIS },
-  { name: 'Ride', attr: AttributeType.DEX },
-  { name: 'Sense Motive', attr: AttributeType.WIS },
-  { name: 'Sleight of Hand', attr: AttributeType.DEX },
-  { name: 'Spellcraft', attr: AttributeType.INT },
-  { name: 'Stealth', attr: AttributeType.DEX },
-  { name: 'Survival', attr: AttributeType.WIS },
-  { name: 'Swim', attr: AttributeType.STR },
-  { name: 'Use Magic Device', attr: AttributeType.CHA },
+  { name: "Acrobatics", attr: AttributeType.DEX },
+  { name: "Appraise", attr: AttributeType.INT },
+  { name: "Bluff", attr: AttributeType.CHA },
+  { name: "Climb", attr: AttributeType.STR },
+  { name: "Craft", attr: AttributeType.INT },
+  { name: "Diplomacy", attr: AttributeType.CHA },
+  { name: "Disable Device", attr: AttributeType.DEX },
+  { name: "Disguise", attr: AttributeType.CHA },
+  { name: "Escape Artist", attr: AttributeType.DEX },
+  { name: "Fly", attr: AttributeType.DEX },
+  { name: "Handle Animal", attr: AttributeType.CHA },
+  { name: "Heal", attr: AttributeType.WIS },
+  { name: "Intimidate", attr: AttributeType.CHA },
+  { name: "Knowledge (Arcana)", attr: AttributeType.INT },
+  { name: "Knowledge (Dungeoneering)", attr: AttributeType.INT },
+  { name: "Knowledge (Engineering)", attr: AttributeType.INT },
+  { name: "Knowledge (Geography)", attr: AttributeType.INT },
+  { name: "Knowledge (History)", attr: AttributeType.INT },
+  { name: "Knowledge (Local)", attr: AttributeType.INT },
+  { name: "Knowledge (Nature)", attr: AttributeType.INT },
+  { name: "Knowledge (Nobility)", attr: AttributeType.INT },
+  { name: "Knowledge (Planes)", attr: AttributeType.INT },
+  { name: "Knowledge (Religion)", attr: AttributeType.INT },
+  { name: "Linguistics", attr: AttributeType.INT },
+  { name: "Perception", attr: AttributeType.WIS },
+  { name: "Perform", attr: AttributeType.CHA },
+  { name: "Profession", attr: AttributeType.WIS },
+  { name: "Ride", attr: AttributeType.DEX },
+  { name: "Sense Motive", attr: AttributeType.WIS },
+  { name: "Sleight of Hand", attr: AttributeType.DEX },
+  { name: "Spellcraft", attr: AttributeType.INT },
+  { name: "Stealth", attr: AttributeType.DEX },
+  { name: "Survival", attr: AttributeType.WIS },
+  { name: "Swim", attr: AttributeType.STR },
+  { name: "Use Magic Device", attr: AttributeType.CHA },
 ];
